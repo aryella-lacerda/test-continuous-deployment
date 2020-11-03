@@ -23,6 +23,7 @@ jobs:
           git config user.email "aryella@popcode.com.br"
           git config user.name "Aryella Lacerda"
           yarn prepare-release
+          git push --follow-tags origin main
 
       # - name: Generate release using Fastlane
       #   uses: maierj/fastlane-action@v1.4.0
