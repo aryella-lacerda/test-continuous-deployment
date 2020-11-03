@@ -1,0 +1,8 @@
+{
+  "name": "test-continuous-deployment",
+  "version": "1.0.0",
+  "description": "Testing CD pipeline using GitHub Actions",
+  "main": "index.js",
+  "author": "Aryella Lacerda",
+  "license": "MIT"
+}

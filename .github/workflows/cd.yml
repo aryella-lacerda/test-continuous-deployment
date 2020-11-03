@@ -1,0 +1,27 @@
+name: Generate release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Bump version and generate commit
+        run: yarn prepare-release
+
+      # - name: Generate release using Fastlane
+      #   uses: maierj/fastlane-action@v1.4.0
+      #   with:
+      #     lane: 'beta'
