@@ -19,7 +19,10 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Bump version and generate commit
-        run: yarn prepare-release
+        run: |
+          git config user.email "aryella@popcode.com.br"
+          git config user.name "Aryella Lacerda"
+          yarn prepare-release
 
       # - name: Generate release using Fastlane
       #   uses: maierj/fastlane-action@v1.4.0
