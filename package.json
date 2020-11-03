@@ -4,5 +4,11 @@
   "description": "Testing CD pipeline using GitHub Actions",
   "main": "index.js",
   "author": "Aryella Lacerda",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "prepare-release": "standard-version"
+  },
+  "devDependencies": {
+    "standard-version": "^9.0.0"
+  }
 }
